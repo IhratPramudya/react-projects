@@ -1,6 +1,8 @@
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContactItem from './ContactItem';
 
 function ContactList({ contacts, onDelete }) {
@@ -14,5 +16,10 @@ function ContactList({ contacts, onDelete }) {
     </div>
   );
 }
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDelete: PropTypes.func.isRequired,
+};
 
 export default ContactList;

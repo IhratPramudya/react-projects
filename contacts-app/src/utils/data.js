@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-const getData = () => [
+let contacts = [
   {
     id: 1,
     name: 'Dimas Saputra',
@@ -20,4 +19,16 @@ const getData = () => [
   },
 ];
 
-export { getData };
+function getContacts() {
+  return contacts;
+}
+
+function addContact(contact) {
+  contacts = [...contacts, { id: +new Date(), imageUrl: '/images/default.jpg', ...contact }];
+}
+
+function deleteContact(id) {
+  contacts = contacts.filter((contact) => contact.id !== id);
+}
+
+export { getContacts, addContact, deleteContact };
