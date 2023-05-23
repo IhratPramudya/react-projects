@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-bind */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { addContact } from '../utils/data';
+import { addContact } from '../utils/api';
 import ContactInput from '../components/ContactInput';
 
 function AddPage() {
